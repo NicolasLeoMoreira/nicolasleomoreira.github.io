@@ -83,16 +83,16 @@ nav li {
 /* Content Sections */
 .content-section {
     max-width: 1200px;
-    margin: 80px auto;
-    background-color: white;
+    margin: 40px auto;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 .content-section h2 {
     font-size: 2rem;
+    color: #444;
     margin-bottom: 1rem;
     cursor: pointer;
 }
