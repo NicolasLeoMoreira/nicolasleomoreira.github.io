@@ -32,32 +32,41 @@ ul {
 
 /* Header */
 header {
-    background-color: #444;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
+    background-color: #444; /* existing style */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* existing style */
+    position: fixed; /* existing style */
+    top: 0; /* existing style */
+    left: 0; /* existing style */
+    right: 0; /* existing style */
+    z-index: 999; /* existing style */
 }
 
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    color: #fff;
+    max-width: 1200px; /* existing style */
+    margin: 0 auto; /* existing style */
+    padding: 10px; /* existing style */
+    display: flex; /* existing style */
+    align-items: center; /* existing style */
+    color: #fff; /* existing style */
 }
 
 nav ul {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    flex: 1; /* existing style */
+    display: flex; /* existing style */
+    justify-content: flex-end; /* existing style */
 }
 
 nav li {
-    margin-left: 20px;
+    margin-left: 20px; /* existing style */
+}
+
+nav a {
+    color: #fff; /* light color for links */
+    transition: color 0.3s ease; /* smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #dcdcdc; /* lighter color on hover */
 }
 
 /* Hero Section */
