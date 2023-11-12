@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Leo Moreira's Portfolio</title>
-    <style>
-        /* Existing CSS styles */
-        /* Add styles for the image and active link here */
-    </style>
-    <script>
-        function changeContent(section) {
-            // JavaScript function to change the content and image based on the section clicked
-            // This function would need to:
-            // 1. Change the src of the img tag to the corresponding image
-            // 2. Update the content in the main section
-        }
-    </script>
+	<title>Nicolas Leo Moreira's Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="javascript:void(0)" onclick="changeContent('about')">About Me</a>
-            <a href="javascript:void(0)" onclick="changeContent('experience')">Experience</a>
-            <a href="javascript:void(0)" onclick="changeContent('contact')">Contact Me</a>
-        </div>
-    </header>
-    <div class="container">
-        <img src="path_to_default_image.jpg" alt="Main Image" id="mainImage">
-        <div class="main" id="mainContent">
-            <!-- Default content goes here -->
-        </div>
-    </div>
-    <div class="footer">
-        <p>© 2023 Nicolas Leo Moreira. All rights reserved.</p>
-    </div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero">
+			<h1>Hello, I'm Nicolas Leo Moreira</h1>
+			<p>Former competitive swimmer and Sustainable Systems Engineer</p>
+		</section>
+
+		<section class="about" id="about">
+			<h2>About Me</h2>
+			<p>[Your about me content]</p>
+		</section>
+
+		<!-- Additional sections like Experience and Contact Me can be added here -->
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Nicolas Leo Moreira. All rights reserved.</p>
+	</footer>
 </body>
 </html>
-
