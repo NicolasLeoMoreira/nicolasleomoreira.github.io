@@ -10,14 +10,24 @@
             var s4eImgSrc = "path_to_s4e_image.jpg"; // Replace with your image path
             var chickadeeImgSrc = "path_to_chickadee_image.jpg"; // Replace with your image path
 
+            var aboutImage = document.getElementById('aboutImage');
+            var experienceImage = document.getElementById('experienceImage');
+
+            aboutImage.style.display = 'none';
+            experienceImage.style.display = 'none';
+
             if (section === 'about') {
-                document.getElementById('aboutImage').src = aboutImgSrc;
+                aboutImage.src = aboutImgSrc;
+                aboutImage.style.display = 'block';
             } else if (section === 'budgeting') {
-                document.getElementById('experienceImage').src = budgetingImgSrc;
+                experienceImage.src = budgetingImgSrc;
+                experienceImage.style.display = 'block';
             } else if (section === 's4e') {
-                document.getElementById('experienceImage').src = s4eImgSrc;
+                experienceImage.src = s4eImgSrc;
+                experienceImage.style.display = 'block';
             } else if (section === 'chickadee') {
-                document.getElementById('experienceImage').src = chickadeeImgSrc;
+                experienceImage.src = chickadeeImgSrc;
+                experienceImage.style.display = 'block';
             }
         }
     </script>
@@ -26,8 +36,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="javascript:void(0)" onclick="changeImage('about')">About Me</a></li>
+                <li><a href="javascript:void(0)" onclick="changeImage('budgeting')">Budgeting Department</a></li>
+                <li><a href="javascript:void(0)" onclick="changeImage('s4e')">President - S4E</a></li>
+                <li><a href="javascript:void(0)" onclick="changeImage('chickadee')">Junior Researcher - Chickadee Challenge</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
@@ -39,30 +51,19 @@
             <p>Sustainable Systems Engineering and Digital Engineering Student</p>
         </section>
 
-        <section class="about" id="about" onclick="changeImage('about')">
+        <section class="about" id="about">
             <h2>About Me</h2>
             <p>My journey has been an exciting blend of competitive swimming, dedicated volunteering, and a passion for various hobbies. As a former competitive swimmer, I've developed discipline and resilience, traits that have powered my volunteering endeavors and professional pursuits. I'm an avid football fan, staunchly supporting Atletico Mineiro, and I find relaxation in hiking and building intricate Lego models. These experiences have shaped my approach to life, blending a competitive spirit with a love for creativity and community service.</p>
-            <img id="aboutImage" src="about_me.jpg" alt="About Me Image" class="section-image">
+            <img id="aboutImage" src="" alt="About Me Image" class="section-image">
         </section>
 
-        <section class="content-section" id="experience">
+        <section class="experience" id="experience">
             <h2>Experience</h2>
-            <div onclick="changeImage('budgeting')" class="content-item">
-                <h3>Budgeting Department</h3>
-                <p>[Your Budgeting Department content]</p>
-            </div>
-            <div onclick="changeImage('s4e')" class="content-item">
-                <h3>President - S4E</h3>
-                <p>[Your President - S4E content]</p>
-            </div>
-            <div onclick="changeImage('chickadee')" class="content-item">
-                <h3>Junior Researcher - Chickadee Challenge</h3>
-                <p>[Your Chickadee Challenge content]</p>
-            </div>
-            <img id="experienceImage" src="path_to_default_experience_image.jpg" alt="Experience Image" class="section-image">
+            <!-- Experience items can be linked individually if needed -->
+            <img id="experienceImage" src="" alt="Experience Image" class="section-image">
         </section>
 
-        <section class="content-section" id="contact">
+        <section class="contact" id="contact">
             <h2>Contact Me</h2>
             <p>[Your Contact Me content]</p>
             <div class="contact-links">
