@@ -3,6 +3,24 @@
 <head>
     <title>Nicolas Leo Moreira's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function changeImage(section) {
+            var aboutImgSrc = "about_me.jpg"; // Replace with your image path
+            var budgetingImgSrc = "path_to_budgeting_image.jpg"; // Replace with your image path
+            var s4eImgSrc = "path_to_s4e_image.jpg"; // Replace with your image path
+            var chickadeeImgSrc = "path_to_chickadee_image.jpg"; // Replace with your image path
+
+            if (section === 'about') {
+                document.getElementById('aboutImage').src = aboutImgSrc;
+            } else if (section === 'budgeting') {
+                document.getElementById('experienceImage').src = budgetingImgSrc;
+            } else if (section === 's4e') {
+                document.getElementById('experienceImage').src = s4eImgSrc;
+            } else if (section === 'chickadee') {
+                document.getElementById('experienceImage').src = chickadeeImgSrc;
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -21,30 +39,32 @@
             <p>Sustainable Systems Engineering and Digital Engineering Student</p>
         </section>
 
-        <section class="about" id="about">
+        <section class="about" id="about" onclick="changeImage('about')">
             <h2>About Me</h2>
             <p>My journey has been an exciting blend of competitive swimming, dedicated volunteering, and a passion for various hobbies. As a former competitive swimmer, I've developed discipline and resilience, traits that have powered my volunteering endeavors and professional pursuits. I'm an avid football fan, staunchly supporting Atletico Mineiro, and I find relaxation in hiking and building intricate Lego models. These experiences have shaped my approach to life, blending a competitive spirit with a love for creativity and community service.</p>
+            <img id="aboutImage" src="about_me.jpg" alt="About Me Image" class="section-image">
         </section>
 
         <section class="content-section" id="experience">
             <h2>Experience</h2>
-            <div class="content-item">
+            <div onclick="changeImage('budgeting')" class="content-item">
                 <h3>Budgeting Department</h3>
-                <p>At the Budgeting Department, I honed my analytical and financial management skills, playing a crucial role in budget planning and resource allocation, which were essential in driving efficiency and organizational growth.</p>
+                <p>[Your Budgeting Department content]</p>
             </div>
-            <div class="content-item">
+            <div onclick="changeImage('s4e')" class="content-item">
                 <h3>President - S4E</h3>
-                <p>As President of S4E, I spearheaded various sustainable engineering projects, leading a team of talented individuals towards innovative solutions in sustainability, reflecting my commitment to environmental stewardship and technological innovation.</p>
+                <p>[Your President - S4E content]</p>
             </div>
-            <div class="content-item">
+            <div onclick="changeImage('chickadee')" class="content-item">
                 <h3>Junior Researcher - Chickadee Challenge</h3>
-                <p>In the Chickadee Challenge, my role as a Junior Researcher involved meticulous data analysis and research, contributing significantly to our understanding of avian behaviors and environmental interactions, furthering scientific knowledge in the field.</p>
+                <p>[Your Chickadee Challenge content]</p>
             </div>
+            <img id="experienceImage" src="path_to_default_experience_image.jpg" alt="Experience Image" class="section-image">
         </section>
 
         <section class="content-section" id="contact">
             <h2>Contact Me</h2>
-            <p>Let's connect! Whether it's for professional collaborations, discussing innovative projects, or just to share a passion for football and Legos, I'd love to hear from you.</p>
+            <p>[Your Contact Me content]</p>
             <div class="contact-links">
                 <a href="mailto:nicolasleomoreira@gmail.com" class="contact-link">Email Me</a>
                 <a href="https://www.linkedin.com/in/nicolas-leo-moreira/" class="contact-link">Connect on LinkedIn</a>
