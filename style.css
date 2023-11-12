@@ -84,22 +84,20 @@ nav li {
 .content-section {
     max-width: 1200px;
     margin: 80px auto;
-    text-align: center;
     background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .content-section h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     cursor: pointer;
 }
 
-.content-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.content-section p, .content-section img {
     margin-bottom: 20px;
 }
 
@@ -107,7 +105,6 @@ nav li {
 .section-image {
     width: 100%;
     height: auto;
-    margin-top: 20px;
     border-radius: 8px;
     display: none;
 }
