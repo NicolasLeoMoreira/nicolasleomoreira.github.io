@@ -64,11 +64,11 @@ nav li {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('background.jpg'); /* Path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("https://source.unsplash.com/1600x900/?nature,landscape");
-    color: #fff; /* White text for contrast on hero image */
+    color: #fff; /* Assuming white text for contrast */
 }
 
 .hero h1 {
