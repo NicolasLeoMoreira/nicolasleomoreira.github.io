@@ -5,12 +5,15 @@
     padding: 0;
 }
 
+/* Add Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #e9ecef; /* softer background color */
 }
 
 a {
@@ -19,7 +22,8 @@ a {
 }
 
 a:hover {
-    color: #5f5f5f;
+    color: #007bff; /* brighter color on hover */
+    text-decoration: underline;
 }
 
 ul {
@@ -83,10 +87,10 @@ nav li {
 /* Individual Section Styling */
 .about-section, .experience-section, .contact-section {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 60px auto;
     background-color: white;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 20px; /* more rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,9 +99,6 @@ nav li {
     color: #444;
     margin-bottom: 1rem;
     cursor: pointer;
-}
-.content-section p, .content-section img {
-    margin-bottom: 20px;
 }
 
 /* Section Images */
@@ -126,13 +127,9 @@ nav li {
     transition: background-color 0.3s;
 }
 
-.contact-link:hover {
-    background-color: #5f5f5f;
-}
-
 /* Footer */
 footer {
-    background-color: #444;
+    background-color: #343a40; /* darker footer */
     color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -143,4 +140,25 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust styles for mobile view */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
 }
