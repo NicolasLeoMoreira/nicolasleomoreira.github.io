@@ -78,3 +78,66 @@
     </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nicolas Leo Moreira's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleImage(section) {
+            var aboutImg = document.getElementById('aboutImage');
+            var experienceImg = document.getElementById('experienceImage');
+
+            if (section === 'about') {
+                aboutImg.style.display = aboutImg.style.display === 'none' ? 'block' : 'none';
+            } else if (section === 'experience') {
+                experienceImg.style.display = experienceImg.style.display === 'none' ? 'block' : 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('https://source.unsplash.com/1600x900/?nature,landscape');">
+            <h1>Hello, I'm Nicolas Leo Moreira</h1>
+            <p>Sustainable Systems Engineering and Digital Engineering Student</p>
+        </section>
+
+        <section class="about" id="about">
+            <h2 onclick="toggleImage('about')">About Me</h2>
+            <p>My journey has been an exciting blend of competitive swimming, dedicated volunteering, and a passion for various hobbies. As a former competitive swimmer, I've developed discipline and resilience, traits that have powered my volunteering endeavors and professional pursuits. I'm an avid football fan, staunchly supporting Atletico Mineiro, and I find relaxation in hiking and building intricate Lego models. These experiences have shaped my approach to life, blending a competitive spirit with a love for creativity and community service.</p>
+            <img id="aboutImage" src="" alt="About Me Image" class="section-image">
+        </section>
+
+        <section class="experience" id="experience">
+            <h2 onclick="toggleImage('experience')">Experience</h2>
+            <p>[Your Experience content]</p>
+            <img id="experienceImage" src="path_to_experience_image.jpg" alt="Experience Image" class="section-image">
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <p>[Your Contact Me content]</p>
+            <div class="contact-links">
+                <a href="mailto:nicolasleomoreira@gmail.com" class="contact-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/nicolas-leo-moreira/" class="contact-link">Connect on LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Nicolas Leo Moreira. All rights reserved.</p>
+    </footer>
+</body>
+</html>
