@@ -80,23 +80,22 @@ nav li {
     margin-bottom: 2rem;
 }
 
-/* Content Sections */
-.content-section {
+/* Individual Section Styling */
+.about-section, .experience-section, .contact-section {
     max-width: 1200px;
     margin: 40px auto;
-    background-color: #ffffff;
+    background-color: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content-section h2 {
+.about-section h2, .experience-section h2, .contact-section h2 {
     font-size: 2rem;
     color: #444;
     margin-bottom: 1rem;
     cursor: pointer;
 }
-
 .content-section p, .content-section img {
     margin-bottom: 20px;
 }
