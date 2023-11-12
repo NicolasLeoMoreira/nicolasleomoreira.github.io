@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif; /* Changed to Helvetica Neue for a more modern look */
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4; /* Light background for a clean look */
+    background-color: #f4f4f4;
 }
 
 a {
@@ -28,7 +28,7 @@ ul {
 
 /* Header */
 header {
-    background-color: #444; /* Darker header for contrast */
+    background-color: #444;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -43,7 +43,7 @@ nav {
     padding: 10px;
     display: flex;
     align-items: center;
-    color: #fff; /* White text for header links */
+    color: #fff;
 }
 
 nav ul {
@@ -67,8 +67,7 @@ nav li {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("https://source.unsplash.com/1600x900/?nature,landscape");
-    color: #fff; /* White text for contrast on hero image */
+    color: #fff;
 }
 
 .hero h1 {
@@ -86,9 +85,9 @@ nav li {
     max-width: 1200px;
     margin: 80px auto;
     text-align: center;
-    background-color: white; /* White background for sections */
+    background-color: white;
     padding: 40px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
 }
 
 .about h2 {
@@ -102,10 +101,70 @@ nav li {
     margin-bottom: 2rem;
 }
 
+/* Experience Section */
+.experience {
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.experience h2, .experience h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    display: inline-block;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #5f5f5f;
+}
+
 /* Footer */
 footer {
-    background-color: #444; /* Darker footer for contrast */
-    color: #fff; /* White text for footer */
+    background-color: #444;
+    color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
