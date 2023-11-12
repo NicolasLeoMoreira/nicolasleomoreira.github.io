@@ -101,8 +101,8 @@ nav li {
     margin-bottom: 2rem;
 }
 
-/* Experience Section */
-.experience {
+/* About, Experience, and Contact Sections */
+.content-section {
     max-width: 1200px;
     margin: 80px auto;
     text-align: center;
@@ -111,40 +111,31 @@ nav li {
     border-radius: 8px;
 }
 
-.experience h2, .experience h3 {
+.content-section h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-.experience-item {
+.content-item {
     margin-bottom: 20px;
 }
 
-.experience-item p {
+.content-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-item p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-/* Contact Section */
-.contact {
-    max-width: 1200px;
-    margin: 80px auto;
-    text-align: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-}
-
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
+/* Contact Links */
 .contact-links {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .contact-link {
