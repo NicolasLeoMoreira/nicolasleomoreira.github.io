@@ -14,28 +14,36 @@ body {
 
 .about-section {
     max-width: 800px; /* Adjusts the width of the 'About Me' section */
-    height: auto;
+    max-height: 650px; /* Defines a maximum height */
+    overflow-y: auto; /* Enables vertical scrolling if content exceeds max height */
     margin: auto; /* Centers the section */
-    padding: 20px; /* Adds some padding inside the boundary */
-    background-color: #f5f5f5;
+    padding: 20px; /* Adds padding inside the boundary */
+    background-color: #f5f5f5; /* Sets the background color */
     border-radius: 10px; /* Softens the edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
 }
+
+.about-item {
+    margin-bottom: 20px; /* Adds space between each item */
+}
+
+.about-item:last-child {
+    margin-bottom: 0; /* Removes bottom margin from the last item */
+}
+
 .about-item img, .about-item video {
-    max-width: 100%; /* Ensure images and videos are not larger than their container */
-     /* Maintains aspect ratio */
-    display: block; /* Ensures the video is properly blocked out */
-    margin: auto; /* Centers the video */
+    max-width: 100%; /* Ensures media does not exceed container width */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 10px; /* Adds space below media */
 }
+
+.about-item video {
+    max-height: 300px; /* Reduces video size, especially for 'About item 7' */
+    object-fit: cover; /* Ensures video covers the area without losing aspect ratio */
+}
+
 .about-item p {
-    padding-bottom: 20px; /* Adds padding below the text */
-}
-.nav-button {
-    cursor: pointer;
-    padding: 10px;
-    font-size: 24px;
-    background-color: transparent;
-    border: none;
-    color: #333; /* Or any color that matches your site's theme */
+    padding: 0 10px; /* Adds padding around the text for better readability */
 }
 
 .about-toggle button:hover {
