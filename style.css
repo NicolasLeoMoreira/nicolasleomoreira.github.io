@@ -9,25 +9,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #e9ecef; /* softer background color */
+    font-family: Arial, sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
+.about-section {
+    padding: 20px;
+    background-color: #f5f5f5;
 }
 
-a:hover {
-    color: #007bff; /* brighter color on hover */
-    text-decoration: underline;
+.about-item {
+    display: none;
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style: none;
+.about-item:first-of-type {
+    display: block;
+}
+
+.about-toggle button {
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.about-toggle button:hover {
+    background-color: #0056b3;
 }
 
 /* Header */

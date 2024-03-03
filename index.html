@@ -4,16 +4,12 @@
     <title>Nicolas Leo Moreira's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // JavaScript functions for toggling images
-        function toggleImage(section) {
-            var aboutImg = document.getElementById('aboutImage');
-            var experienceImg = document.getElementById('experienceImage');
-
-            if (section === 'about') {
-                aboutImg.style.display = aboutImg.style.display === 'none' ? 'block' : 'none';
-            } else if (section === 'experience') {
-                experienceImg.style.display = experienceImg.style.display === 'none' ? 'block' : 'none';
-            }
+        function toggleAbout(sectionId) {
+            var aboutItems = document.querySelectorAll('.about-item');
+            aboutItems.forEach(item => {
+                item.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
         }
     </script>
 </head>
@@ -22,7 +18,6 @@
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
@@ -35,20 +30,65 @@
         </section>
 
         <section class="about-section" id="about">
-            <h2 onclick="toggleImage('about')">About Me</h2>
-            <p>[About Me content]</p>
-            <img id="aboutImage" src="about_me.jpg" alt="About Me Image" class="section-image">
-        </section>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <!-- About item 1 -->
+                <div id="about1" class="about-item">
+                    <p>I was born in Brazil, and moved to Australia when I was 5 years old, where I spent three years and sparked my desire to study abroad. I've come to believe that education really benefits when you step out of your comfort zone, learning from new cultures, friendships, and diverse perspectives.</p>
+                    <img src="[IMG_SRC_BRAZIL]" alt="Brazil to Australia">
+                </div>
+                <!-- About item 2 -->
+                <div id="about2" class="about-item">
+                    <p>Why Engineering? Ever since I was young, I've been captivated by the idea of building and understanding how things come together. I was that curious kid who would stand outside construction sites, wondering what everything was for. So choosing to study engineering felt like a natural decision.</p>
+                    <img src="[IMG_SRC_ENGINEERING]" alt="Engineering">
+                </div>
+                <!-- About item 3 -->
+                <div id="about3" class="about-item">
+                    <p>Why Sustainability? I knew I wanted to make a positive impact on the world. I remember when my mom got a free one-year National Geographic magazine subscription, and I would wait every month to see the new edition. They always had a section that talked about clean energy or sustainable technologies, and I always found that to be my favorite read. I've always enjoyed being out in nature and I want to know that I'm doing something that will help preserve it for me, and for everyone else.</p>
+                    <img src="[IMG_SRC_SUSTAINABILITY]" alt="Sustainability">
+                </div>
+                <!-- About item 4 -->
+                <div id="about4" class="about-item">
+                    <p>My parents put me in a swimming class at the age of 3, after I almost drowned in a pool and my mom (who doesn't know how to swim) had to save me. Ever since, I've spent 10 years swimming competitively. Swimming has taught me so much, and my best placements were 8th in Brazil in my age category in the 100m breaststroke and 3rd in the 4x100m medley relay.</p>
+                    <img src="[IMG_SRC_SWIMMING]" alt="Swimming">
+                </div>
+                <!-- About item 5 -->
+                <div id="about5" class="about-item">
+                    <p>I love hiking and being outdoors, and building Legos.</p>
+                    <img src="[IMG_SRC_HIKE]" alt="Hike">
+                </div>
+                 <!-- About item 6 -->
+                 <div id="about6" class="about-item">
+                    <p>I'm a huge Coldplay fan, but my favorite song is Sweet Disposition, by The Temper Trap.</p>
+                    <img src="[IMG_SRC_COLDPLAY]" alt="Coldplay">
+                </div>
+                 <!-- About item 7 -->
+                <div id="about7" class="about-item">
+                    <p>I love football (the true football) and I'm a huge Atletico Mineiro supporter, my hometown club.</p>
+                    <img src="[IMG_SRC_ATLMINEIRO]" alt="Atletico Mineiro">
+                </div>
+                <!-- About item 8 -->
+                 <div id="about8" class="about-item">
+                    <p>My favorite book is The Demon-Haunted World, by Ann Druyan and Carl Sagan. It changed my view on life, by highlighting how scientific thinking is crucial for navigating today's complex world. The book is extremely well written and offers insights on how we can separate fact from fiction and think critically, empowering us to make informed decisions.</p>
+                    <img src="[IMG_SRC_BOOK]" alt="Favorite Book">
+                </div>
 
-        <section class="experience-section" id="experience">
-            <h2 onclick="toggleImage('experience')">Experience</h2>
-            <p>[Experience content]</p>
-            <img id="experienceImage" src="path_to_experience_image.jpg" alt="Experience Image" class="section-image">
+            </div>
+            <div class="about-toggle">
+                <button onclick="toggleAbout('about1')">1</button>
+                <button onclick="toggleAbout('about2')">2</button>
+                <button onclick="toggleAbout('about3')">3</button>
+                <button onclick="toggleAbout('about4')">4</button>
+                <button onclick="toggleAbout('about5')">5</button>
+                <button onclick="toggleAbout('about6')">6</button>
+                <button onclick="toggleAbout('about7')">7</button>
+                <button onclick="toggleAbout('about8')">8</button>
+            </div>
         </section>
 
         <section class="contact-section" id="contact">
             <h2>Contact Me</h2>
-            <p>[Contact Me content]</p>
+            <p>Personal: (587) 896-7632 | nicolasleomoreira@gmail.com</p>
             <div class="contact-links">
                 <a href="mailto:nicolasleomoreira@gmail.com" class="contact-link">Email Me</a>
                 <a href="https://www.linkedin.com/in/nicolas-leo-moreira/" class="contact-link">Connect on LinkedIn</a>
