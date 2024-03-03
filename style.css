@@ -44,7 +44,7 @@ body {
 }
 
 .about-item p {
-    padding: 0 10px; /* Adds padding around the text for better readability */
+    padding: 20px; /* Adds padding around the text for better readability */
 }
 
 .about-toggle button:hover {
