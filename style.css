@@ -14,7 +14,7 @@ body {
 
 .about-section {
     max-width: 800px; /* Adjusts the width of the 'About Me' section */
-    height: 600px;
+    height: auto;
     margin: auto; /* Centers the section */
     padding: 20px; /* Adds some padding inside the boundary */
     background-color: #f5f5f5;
@@ -22,7 +22,7 @@ body {
 }
 .about-item img, .about-item video {
     max-width: 100%; /* Ensure images and videos are not larger than their container */
-    height: auto; /* Maintains aspect ratio */
+     /* Maintains aspect ratio */
     display: block; /* Ensures the video is properly blocked out */
     margin: auto; /* Centers the video */
 }
