@@ -35,10 +35,6 @@ body {
     max-width: 100%; /* Ensures media does not exceed container width */
     height: auto; /* Maintains aspect ratio */
     margin-bottom: 10px; /* Adds space below media */
-}
-
-.about-item video {
-    max-height: 600px; /* Reduces video size, especially for 'About item 7' */
     object-fit: cover; /* Ensures video covers the area without losing aspect ratio */
 }
 
