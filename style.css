@@ -17,22 +17,20 @@ body {
     background-color: #f5f5f5;
 }
 
-.about-item {
-    display: none;
-    margin-bottom: 20px;
+.about-item img, .about-item video {
+    max-width: 100%; /* Ensure images and videos are not larger than their container */
+    height: auto; /* Maintain aspect ratio */
 }
-
-.about-item:first-of-type {
-    display: block;
+.about-item video {
+    width: 100%; /* Make videos larger */
 }
-
-.about-toggle button {
-    padding: 10px;
-    margin-right: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
+.nav-button {
     cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #333; /* Or any color that matches your site's theme */
 }
 
 .about-toggle button:hover {

@@ -4,14 +4,21 @@
     <title>Nicolas Leo Moreira's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function toggleAbout(sectionId) {
-            var aboutItems = document.querySelectorAll('.about-item');
-            aboutItems.forEach(item => {
-                item.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
+        var currentIndex = 0;
+        function showSection(index) {
+            var sections = document.querySelectorAll('.about-item');
+            if (index >= 0 && index < sections.length) {
+                sections[currentIndex].style.display = 'none';
+                currentIndex = index;
+                sections[currentIndex].style.display = 'block';
+            }
         }
-    </script>
+        function navigate(direction) {
+            var newIndex = currentIndex + direction;
+            showSection(newIndex);
+        }
+        document.addEventListener('DOMContentLoaded', function() { showSection(0); }); // Show the first section on load
+        </script>
 </head>
 <body>
     <header>
@@ -84,14 +91,10 @@
 
             </div>
             <div class="about-toggle">
-                <button onclick="toggleAbout('about1')">1</button>
-                <button onclick="toggleAbout('about2')">2</button>
-                <button onclick="toggleAbout('about3')">3</button>
-                <button onclick="toggleAbout('about4')">4</button>
-                <button onclick="toggleAbout('about5')">5</button>
-                <button onclick="toggleAbout('about6')">6</button>
-                <button onclick="toggleAbout('about7')">7</button>
-                <button onclick="toggleAbout('about8')">8</button>
+                <!-- Previous Button -->
+                <button onclick="navigate(-1)" class="nav-button prev">&#9664;</button>
+                <!-- Next Button -->
+                <button onclick="navigate(1)" class="nav-button next">&#9654;</button>
             </div>
         </section>
 
