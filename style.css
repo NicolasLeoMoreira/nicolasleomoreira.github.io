@@ -25,13 +25,17 @@ body {
 
 .about-item {
     margin-bottom: 20px; /* Adds space between items */
+    align-items: center; /* Aligns items centrally for a neat layout */
+    justify-content: center; /* Centers content vertically within the item */
+    padding: 20px; /* Adds padding around each item for spacing */
 }
 
 .about-item img, .about-item video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto 20px; /* Centers content and adds space below */
+    width: 90%; /* Adjusts to a suitable width within the container */
+    max-height: 600px; /* Sets a maximum height for both images and videos */
+    object-fit: cover; /* Ensures the content covers the given dimension, cropping if necessary */
+    display: block; /* Block display to manage layout */
+    margin: 20px auto; /* Centers the content with margin on top and bottom */
 }
 
 .about-item video {
