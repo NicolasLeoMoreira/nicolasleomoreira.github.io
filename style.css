@@ -22,10 +22,12 @@ body {
 }
 .about-item img, .about-item video {
     max-width: 100%; /* Ensure images and videos are not larger than their container */
-    height: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the video is properly blocked out */
+    margin: auto; /* Centers the video */
 }
-.about-item video {
-    width: 100%; /* Make videos larger */
+.about-item p {
+    padding-bottom: 20px; /* Adds padding below the text */
 }
 .nav-button {
     cursor: pointer;
