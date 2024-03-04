@@ -40,7 +40,7 @@ body {
 /* Targets only the first image within the about-section */
 .about-section .about-item:first-child img {
     object-fit: contain; /* Changes fit style to prevent cutting */
-    max-height: 650px; /* Adjusts max height to fit the section without cutting */
+    max-height: auto; /* Adjusts max height to fit the section without cutting */
 }
 
 .about-item img {
