@@ -37,6 +37,11 @@ body {
     display: block; /* Block display to manage layout */
     margin: 20px auto; /* Centers the content with margin on top and bottom */
 }
+/* Targets only the first image within the about-section */
+.about-section .about-item:first-child img {
+    object-fit: contain; /* Changes fit style to prevent cutting */
+    max-height: 650px; /* Adjusts max height to fit the section without cutting */
+}
 
 .about-item img {
     height: auto; 
@@ -45,7 +50,7 @@ body {
 }
 
 .about-item video {
-    max-height: auto; /* Adjusts video size for 'About item 7' */
+    max-height: auto; 
     object-fit: cover; /* Ensures the video covers the area without losing aspect ratio */
     margin: auto;
 }
