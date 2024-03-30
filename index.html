@@ -6,7 +6,7 @@
     <script>
         var currentIndex = 0; // Current about section index
         function navigate(direction) {
-            var sections = document.querySelectorAll('.about-item');
+            var sections = document.querySelectorAll('.about-item', '.projects-item');
             currentIndex += direction;
             // Loop to the first/last item if the end/start is reached
             if (currentIndex >= sections.length) {
@@ -28,6 +28,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#my-projects">My Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
@@ -146,6 +147,12 @@
                     <p>In SUSE 315, our final project was to evaluate the installation of the rainwater cistern at the MacKimmie Tower in the University of Calgary, using triple bottom line accounting. The most significant learning was the challenges of assigning monetary values to such abstract things. This project showed the importance of holistic thinking in sustainability, highlighting that while the solution might be beneficial environmentally, we still have to consider options to make it more financially viable. It taught me the criticality of integrating economic principles into sustainable engineering projects, viewing them as opportunities to quantify our positive contribution to our community and environment.</p>
                     <img src="SUSE315.jpg" alt="MacKimmie Tower, SUSE 315 - Engineering Economics and Decision Making for Sustainability">
                 </div>
+            </div>
+            <div class="projects-toggle">
+                <!-- Previous Button -->
+                <button onclick="navigate(-1)" class="nav-button prev">&#9664;</button>
+                <!-- Next Button -->
+                <button onclick="navigate(1)" class="nav-button next">&#9654;</button>
             </div>
         </section>
         
