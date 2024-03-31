@@ -4,21 +4,26 @@
     <title>Nicolas Leo Moreira's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // Initialize navigation for both sections
-    document.addEventListener('DOMContentLoaded', () => {
-        navigate('about', 0); // Start the About Me section at the first item
-        navigate('projects', 0); // Start the My Projects section at the first item
-    });
+        document.addEventListener('DOMContentLoaded', () => {
+    // Initialize both sections to show the first item
+    showItem('about-item', 0);
+    showItem('project-item', 0);
+});
 
-    function navigate(section, direction) {
-        let items = document.querySelectorAll(`.${section}-item`); // Select items based on section
-        let currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
-        let newIndex = (currentIndex + direction + items.length) % items.length; // Calculate new index with looping
+function navigate(section, direction) {
+    let items = document.querySelectorAll(`.${section}`);
+    let currentIndex = Array.from(items).findIndex(item => item.style.display === 'block');
+    let newIndex = (currentIndex + direction + items.length) % items.length;
+    
+    // Hide all items in the section
+    items.forEach(item => item.style.display = 'none');
+    // Show the new item
+    items[newIndex].style.display = 'block';
+}
 
-    // Hide all items and show the new one
-    items.forEach((item, index) => {
-        item.style.display = index === newIndex ? 'block' : 'none';
-    });
+function showItem(section, index) {
+    let items = document.querySelectorAll(`.${section}`);
+    items.forEach((item, idx) => item.style.display = idx === index ? 'block' : 'none');
 }
     </script>
 </head>
@@ -108,10 +113,8 @@
 
             </div>
             <div class="about-toggle">
-                <!-- Previous Button -->
-                <button onclick="navigate(-1)" class="nav-button prev">&#9664;</button>
-                <!-- Next Button -->
-                <button onclick="navigate(1)" class="nav-button next">&#9654;</button>
+                <button onclick="navigate('about-item', -1)" class="nav-button prev">&#9664; Previous</button>
+                <button onclick="navigate('about-item', 1)" class="nav-button next">Next &#9654;</button>
             </div>
         </section>
         
@@ -157,10 +160,8 @@
                 </div>
             </div>
             <div class="projects-toggle">
-                <!-- Previous Button -->
-                <button onclick="navigate(-1)" class="nav-button prev">&#9664;</button>
-                <!-- Next Button -->
-                <button onclick="navigate(1)" class="nav-button next">&#9654;</button>
+                <button onclick="navigate('project-item', -1)" class="nav-button prev">&#9664; Previous</button>
+                <button onclick="navigate('project-item', 1)" class="nav-button next">Next &#9654;</button>
             </div>
         </section>
         

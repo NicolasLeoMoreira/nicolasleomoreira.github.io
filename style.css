@@ -13,8 +13,8 @@ body {
 }
 
 .about-section, .projects-section {
-    max-width: 900px; /* Adjusts the width of the 'About Me' section */
-    max-height: 700px; /* Defines a maximum height */
+    max-width: 1200px; /* Adjusts the width of the 'About Me' section */
+    max-height: 900px; /* Defines a maximum height */
     overflow-y: auto; /* Enables vertical scrolling if content exceeds max height */
     margin: auto; /* Centers the section */
     padding: 20px; /* Adds padding inside the boundary */
@@ -32,7 +32,7 @@ body {
 
 .about-item img, .about-item video, .project-item img, .project-item video {
     width: 90%; /* Adjusts to a suitable width within the container */
-    max-height: 700px; /* Sets a maximum height for both images and videos */
+    max-height: 800px; /* Sets a maximum height for both images and videos */
     object-fit: cover; /* Ensures the content covers the given dimension, cropping if necessary */
     display: block; /* Block display to manage layout */
     margin: 20px auto; /* Centers the content with margin on top and bottom */
