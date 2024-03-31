@@ -106,11 +106,14 @@ nav ul {
 
 nav li {
     margin-left: 20px; /* existing style */
+    list-style-type: none; /* Removes bullets or balls from lists */
 }
 
 nav a {
     color: #fff; /* light color for links */
     transition: color 0.3s ease; /* smooth transition for hover effect */
+    text-decoration: none; /* Removes text underline */
+    border-bottom: none; /* Removes bottom border line */
 }
 
 nav a:hover {
