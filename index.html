@@ -4,23 +4,22 @@
     <title>Nicolas Leo Moreira's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        var currentIndex = 0; // Current about section index
-        function navigate(direction) {
-            var sections = document.querySelectorAll('.about-item', '.projects-item');
-            currentIndex += direction;
-            // Loop to the first/last item if the end/start is reached
-            if (currentIndex >= sections.length) {
-                currentIndex = 0;
-            } else if (currentIndex < 0) {
-                currentIndex = sections.length - 1;
-            }
-            // Hide all sections and show only the current one
-            sections.forEach((section, index) => {
-                section.style.display = index === currentIndex ? 'block' : 'none';
-            });
-        }
-        // Initialize the display
-        document.addEventListener('DOMContentLoaded', () => navigate(0));
+        // Initialize navigation for both sections
+    document.addEventListener('DOMContentLoaded', () => {
+        navigate('about', 0); // Start the About Me section at the first item
+        navigate('projects', 0); // Start the My Projects section at the first item
+    });
+
+    function navigate(section, direction) {
+        let items = document.querySelectorAll(`.${section}-item`); // Select items based on section
+        let currentIndex = Array.from(items).findIndex(item => item.style.display !== 'none');
+        let newIndex = (currentIndex + direction + items.length) % items.length; // Calculate new index with looping
+
+    // Hide all items and show the new one
+    items.forEach((item, index) => {
+        item.style.display = index === newIndex ? 'block' : 'none';
+    });
+}
     </script>
 </head>
 <body>
