@@ -27,7 +27,7 @@ body {
     margin-bottom: 20px; /* Adds space between items */
     align-items: center; /* Aligns items centrally for a neat layout */
     justify-content: center; /* Centers content vertically within the item */
-    padding: 20px; /* Adds padding around each item for spacing */
+    /*padding: 20px; /* Adds padding around each item for spacing */
 }
 
 .about-item img, .about-item video, .project-item img, .project-item video {
