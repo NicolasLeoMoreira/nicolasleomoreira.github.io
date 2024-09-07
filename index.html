@@ -26,7 +26,12 @@ function showItem(section, index) {
     items.forEach((item, idx) => item.style.display = idx === index ? 'block' : 'none');
 }
     </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -178,5 +183,33 @@ function showItem(section, index) {
     <footer>
         <p>&copy; 2024 Nicolas Leo Moreira. All rights reserved.</p>
     </footer>
+
+<script>
+    // Modal Popup
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        var modals = document.querySelectorAll('.modal');
+        modals.forEach(function(modal) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('projectModal')">&times;</span>
+        <h2>Project Details</h2>
+        <p>This will include more information about the selected project.</p>
+    </div>
+</div>
 </body>
 </html>
