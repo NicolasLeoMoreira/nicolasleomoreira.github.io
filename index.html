@@ -1,215 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Nicolas Leo Moreira's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Leo Moreira's Portfolio
+    </title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    // Initialize both sections to show the first item
-    showItem('about-item', 0);
-    showItem('project-item', 0);
-});
-
-function navigate(section, direction) {
-    let items = document.querySelectorAll(`.${section}`);
-    let currentIndex = Array.from(items).findIndex(item => item.style.display === 'block');
-    let newIndex = (currentIndex + direction + items.length) % items.length;
-    
-    // Hide all items in the section
-    items.forEach(item => item.style.display = 'none');
-    // Show the new item
-    items[newIndex].style.display = 'block';
-}
-
-function showItem(section, index) {
-    let items = document.querySelectorAll(`.${section}`);
-    items.forEach((item, idx) => item.style.display = idx === index ? 'block' : 'none');
-}
-    </script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-    </style>
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#my-projects">My Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+    <nav id="desktop-nav">
+        <div class="logo">Nicolas Leo Moreira</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a> </li>
+                <li><a href="#experience">Experience</a> </li>
+                <li><a href="#projects">Projects</a> </li>
+                <li><a href="#contact">Contact</a> </li>
             </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero" style="background-image: url('https://picsum.photos/1600/900?random=1');">
-            <h1>Hello, I'm Nicolas Leo Moreira</h1>
-            <p>Sustainable Systems Engineering and Digital Engineering Student</p>
-        </section>
-
-        <section class="about-section" id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <!-- About item 1 -->
-                <div id="about1" class="about-item">
-                    <h3>My Roots</h3>
-                    <p>I was born in Brazil, and moved to Australia when I was 5 years old, where I spent three years and sparked my desire to study abroad. I've come to believe that education really benefits when you step out of your comfort zone, learning from new cultures, friendships, and diverse perspectives. </p>
-                    <img src="AUSTRALIA.JPG" alt="Brazil to Australia">
-                </div>
-                <!-- About item 2 -->
-                <div id="about2" class="about-item">
-                    <h3>Why Engineering?</h3>
-                    <p> Ever since I was young, I've been captivated by the idea of building and understanding how things come together. I was that curious kid who would stand outside construction sites, wondering what everything was for. My passion for building didn't stop there, as every other engineer, I loved building Legos and would spend hours and hours until the final piece was perfectly in place. So choosing to study engineering felt like a natural decision.</p>
-                    <img src="ENGINEERING.JPG" alt="Engineering">
-                </div>
-                <!-- About item 3 -->
-                <div id="about3" class="about-item">
-                    <h3>Why Sustainability?</h3>
-                    <p> I knew I wanted to make a positive impact on the world. I remember when my mom got a free one-year National Geographic magazine subscription, and I would wait every month to see the new edition. They always had a section that talked about clean energy or sustainable technologies, and I always found that to be my favorite read. I've always enjoyed being out in nature and I want to know that I'm doing something that will help preserve it for me, and for everyone else. </p>
-                    <img src="SUSTAINABILITY.jpg" alt="Sustainability">
-                </div>
-                <!-- About item 4 -->
-                <div id="about4" class="about-item">
-                    <h3>Swimming</h3>
-                    <p>My parents put me in a swimming class at the age of 3, after I almost drowned in a pool and my mom (who doesn't know how to swim) had to save me. Ever since, I've spent 10 years swimming competitively. Swimming has taught me so much, and my best placements were 8th in Brazil in my age category in the 100m breaststroke and 3rd in the 4x100m medley relay. I've also swum a few open water 5km and 10km events. </p>
-                    <img src="SWIMMING.JPG" alt="Swimming">
-                </div>
-                <!-- About item 5 -->
-                <div id="about5" class="about-item">
-                    <h3>Outdoors</h3>
-                    <p>I love hiking, snowboarding and being outdoors in general. However, if I'm inside I would love to be building Legos. </p>
-                    <video width="800" height="650" controls>
-                        <source src="LAKE LOUISE.mov" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                 <!-- About item 6 -->
-                 <div id="about6" class="about-item">
-                    <h3>Music</h3>
-                    <p>I'm a huge Coldplay fan, but my favorite song is Sweet Disposition, by The Temper Trap. </p>
-                    <video width="800" height="650" controls>
-                        <source src="COLDPLAY.mov" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                 <!-- About item 7 -->
-                <div id="about7" class="about-item">
-                    <h3>Football</h3>
-                    <p>I love football (the true football) and I'm a huge Atletico Mineiro supporter, my hometown club. </p>
-                    <video width=auto height="650" controls>
-                        <source src="ATLMINEIRO.MOV" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <!-- About item 8 -->
-                 <div id="about8" class="about-item">
-                    <h3>Books</h3>
-                    <p>I've always loved to read, specially the Percy Jackson novel series, by Rick Riordan, My favorite book is The Demon-Haunted World, by Ann Druyan and Carl Sagan. It changed my view on life, by highlighting how scientific thinking is crucial for navigating today's complex world. The book is extremely well written and offers insights on how we can separate fact from fiction and think critically, empowering us to make informed decisions. </p>
-                    <img src="BOOKS.JPG" alt="Favorite Book">
-                </div>
-                <!-- About item 9 -->
-                <div id="about9" class="about-item">
-                    <h3>Ironman Adventures</h3>
-                    <p>I spent 7 months training for my first ever 70.3 Ironman, that was held in Harmony, AB. The race was extremely fun and such a great personal achievement, despite me feeling quite sick during the run. </p>
-                    <img src="IRONMAN.JPG" alt="Ironman Finisher">
-                </div>
-
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Nicolas Leo Moreira</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="about-toggle">
-                <button onclick="navigate('about-item', -1)" class="nav-button prev">&#9664; </button>
-                <button onclick="navigate('about-item', 1)" class="nav-button next"> &#9654;</button>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About Me</a> </li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a> </li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a> </li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a> </li>
             </div>
-        </section>
-        
-        <section class="projects-section" id="my-projects">
-            <h2>My Projects</h2>
-            <div id="project1" class="project-content">
-                <!-- Project 1 -->
-                <div class="project-item">
-                    <h3>School Tutoring</h3>
-                    <p>I took part in several projects like dog adoption campaigns, food and clothes distribution for the homeless, orphanages and retirement homes visits, natural disaster relief campaigns, as well as online classes for public school students. The latter is an initiative I created after discovering that these children were not having classes and didn't receive any support from their institutions during school closures. The project was called "School Tutoring" and we gave online classes for these students according to their demand. For this initiative I was awarded by the president of the institution, Ricardo Vieira Santiago, and the volunteering group-leader, Karina Barquete.</p>
-                    <img src="VOLUNTEERING.JPG" alt="Award Volunteering Image">
-                </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Nicolas Leo Moreira</h1>
+            <p class="section__text__p2">Sustainable Systems Engineering<br>and Digital Engineering Student</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile"
+                class="icon" onclick="location.href='https://www.linkedin.com/in/nicolas-leo-moreira/'"/>
                 
-                <!-- Project 2 -->
-                <div id="project2" class="project-item">
-                    <h3>ENGG 200 - Introduction to Engineering Design</h3>
-                    <p>In my first year of Engineering, we were given the final project to develop a portable video game console, marking my initial experience in applying theoretical engineering principles to a practical, user-centered design. Collaborating in a team, we created a console inspired by Piano Tiles, that contained 4 different songs that we picked and a classic piano-inspired design (which I'm quite proud of designing in my first experience with Fusion360). This experience showed me the importance of integrating user experience, aesthetics, and functionality, highlighting engineering as a field driven by innovation, problem-solving, and the ability to meet end-user needs.</p>
-                    <video width="800" height="650" controls>
-                        <source src="ENGG200.MOV" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <img src="./assets/github.png" alt="My Github profile"
+                class="icon" onclick="location.href='https://github.com/NicolasLeoMoreira'"/>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1"> Get To Know More</p>
+        <h1 class="title"> About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+                    <h3>Experience</h3>
+                    <p>Summer Intern, Biome Renewables<br>Junior Researcher, Manufactured Ecosystems<br>Junior Researcher, Chickadee Challenge</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Eduction icon" class="icon"/>
+                    <h3>Education</h3>
+                    <p>B.Sc. Sustainable Systems Engineering <br> Minor in Digital Engineering</p>
+                    </div>
                 </div>
-                
-                <!-- Project 3 -->
-                <div id="project3" class="project-item">
-                    <h3>SUSE 300 - Introduction to Sustainable Systems Design</h3>
-                    <p>In SUSE 300, we decided to tackle urban public transportation. My group and I aimed to enhance and redevelop the city's transit system by focusing on upgrading a bus station initially and then expanding the scope to tackling a station at the Calgary's Green Line project to make travel more sustainable, accessible, and pleasant for users. Drawing insights from expert consultations, including an amazing discussion with Omid Nakhaei from Arup, Toronto, we delved into sustainable design from the ground up, considering everything from green materials to making stations more than just transit points but community hubs. These efforts highlighted the balance between innovation and practicality, pushing us to rethink our approach to include broader community benefits. Our project illustrates the potential of thoughtful planning and teamwork to contribute to a more sustainable, efficient, accessible, and connected urban future, hoping to inspire further action in developing eco-friendly transportation solutions in Calgary and beyond.</p>
-                    <img src="SUSE300.jpg" alt="My Sketches for SUSE 300 - Introduction to Sustainable Systems Design">
-                </div>
+                <div class="text-container">
+                    <p>Born in Brazil, I moved to Australia at a young age, sparking my desire to explore different cultures and pursue education abroad. From a young age, I’ve been fascinated by how things work, whether it was construction sites or spending hours building with Legos. This curiosity naturally led me to engineering, where I can apply creativity and logic to solve real-world challenges.
 
-                <!-- Project 4 -->
-                <div id="project4" class="project-item">
-                    <h3>SUSE 303 - Signals, Instrumentation, and Data</h3>
-                    <p>In the SUSE 303 course, we made projects like the Arduino Calculator, Automatic Door Opener, and Joystick/IR Remote Controlled Dot Matrix. My biggest takeaway was how technology supports sustainability through systems thinking. It was very interesting to see how even Arduinos, something very popular and widely utilized, can contribute significantly towards sustainable goals. Using the components and finding ways to integrate them in a functioning project, taught me to see projects not just as tasks but as opportunities to integrate sustainable design principles into every aspect of engineering.</p>
-                    <img src="SUSE303.jpg" alt="SUSE 303 - Signals, Instrumentation, and Data">
-                </div>
-                
-               <!-- Project 5 -->
-                <div id="project5" class="project-item">
-                    <h3>SUSE 315 - Engineering Economics and Decision Making for Sustainability</h3>
-                    <p>In SUSE 315, our final project was to evaluate the installation of the rainwater cistern at the MacKimmie Tower in the University of Calgary, using triple bottom line accounting. The most significant learning was the challenges of assigning monetary values to such abstract things. This project showed the importance of holistic thinking in sustainability, highlighting that while the solution might be beneficial environmentally, we still have to consider options to make it more financially viable. It taught me the criticality of integrating economic principles into sustainable engineering projects, viewing them as opportunities to quantify our positive contribution to our community and environment.</p>
-                    <img src="SUSE315.jpg" alt="MacKimmie Tower, SUSE 315 - Engineering Economics and Decision Making for Sustainability">
+                        <br>My dedication to sustainability comes from a deep appreciation for the environment, inspired by reading National Geographic and exploring nature. I aim to make a positive impact through clean energy and sustainable design. I’ve also been a competitive swimmer for over a decade, and sports have taught me the importance of discipline and perseverance, traits I carry into my studies and work.
+                        
+                        <br>Beyond academics, I’m an outdoor enthusiast, avid football fan, and music lover, always seeking new adventures, whether it’s training for a 70.3 Ironman or hiking in the Rockies. I strive to integrate my diverse experiences into everything I do, always working towards a more sustainable future.</p>
                 </div>
             </div>
-            <div class="projects-toggle">
-                <button onclick="navigate('project-item', -1)" class="nav-button prev">&#9664; </button>
-                <button onclick="navigate('project-item', 1)" class="nav-button next"> &#9654;</button>
+        </div>
+        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experienc-sub-title">Technical Skills</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Python</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Microsoft Office</h3>
+                                <p>Proficient</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Autodesk Fusion 360</h3>
+                                <p>Proficient</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Canva & Photoshop</h3>
+                                <p>Proficient</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>C++, HTML & CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
-        </section>
-        
-        <section class="contact-section" id="contact">
-            <h2>Contact Me</h2>
-            <p>Personal: (587) 896-7632 | nicolasleomoreira@gmail.com</p>
-            <div class="contact-links">
-                <a href="mailto:nicolasleomoreira@gmail.com" class="contact-link">Email Me</a>
-                <a href="https://www.linkedin.com/in/nicolas-leo-moreira/" class="contact-link">Connect on LinkedIn</a>
+            <div class="about-containers"></div>
+                <div class="details-container">
+                    <h2 class="experienc-sub-title">Soft Skills</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Leadership</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Collaboration</h3>
+                                <p>Strong Team Player</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Systematic Thinking</h3>
+                                <p>Proficient</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Public Speaking</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Creativity</h3>
+                                <p>Proficient</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
-
+        </div>
+        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+    
+                <!-- Project 1: School Tutoring -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-1.png" alt="School Tutoring" class="project-img"/>
+                    </div>
+                    <h2 class="experienc-sub-title project-title">School Tutoring</h2>
+                    <p>I initiated the "School Tutoring" project to support public school students in Brazil who faced educational disruptions during the COVID-19 pandemic. We provided personalized online classes, covering subjects as per student needs. This project was recognized by the institution’s president, contributing to students' educational continuity during a challenging time.</p>
+                </div>
+    
+                <!-- Project 2: ENGG 200 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-2.png" alt="ENGG 200 Project" class="project-img"/>
+                    </div>
+                    <h2 class="experienc-sub-title project-title">ENGG 200 - Portable Video Game Console</h2>
+                    <p>In my first year of Engineering, I collaborated with a team to design a portable video game console inspired by "Piano Tiles." We implemented four songs and a user-friendly design, marking my first practical application of theoretical engineering principles using Fusion360 for the design.</p>
+                </div>
+    
+                <!-- Project 3: SUSE 300 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-3.png" alt="SUSE 300 Project" class="project-img"/>
+                    </div>
+                    <h2 class="experienc-sub-title project-title">SUSE 300 - Sustainable Transit Redesign</h2>
+                    <p>Our group project focused on redesigning Calgary's urban transit system to make it more sustainable and accessible. We proposed an upgraded bus station model, integrating green materials and community hubs, inspired by discussions with professionals from Arup.</p>
+                </div>
+    
+                <!-- Project 4: SUSE 315 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-4.png" alt="SUSE 315 Project" class="project-img"/>
+                    </div>
+                    <h2 class="experienc-sub-title project-title">SUSE 315 - Engineering Economics and Decision Making for Sustainability</h2>
+                    <p>In SUSE 315, our final project was to evaluate the installation of a rainwater cistern at MacKimmie Tower using triple bottom line accounting. This project highlighted the challenges of balancing environmental benefits with economic feasibility, showcasing the importance of holistic thinking in sustainable engineering.</p>
+                </div>
+    
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get In Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:nicolasleomoreira@gmail.com">nicolasleomoreira@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/nicolas-leo-moreira/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
     <footer>
-        <p>&copy; 2024 Nicolas Leo Moreira. All rights reserved.</p>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about" onclick="toggleMenu()">About Me</a> </li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a> </li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a> </li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Nicolas Leo Moreira. All Rights Reserved.</p>
     </footer>
-
-<script>
-    // Modal Popup
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = 'block';
-    }
-
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-        var modals = document.querySelectorAll('.modal');
-        modals.forEach(function(modal) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    }
-</script>
-
-<div id="projectModal" class="modal">
-    <div class="modal-content">
-        <span class="modal-close" onclick="closeModal('projectModal')">&times;</span>
-        <h2>Project Details</h2>
-        <p>This will include more information about the selected project.</p>
-    </div>
-</div>
+    <script src="script.js"></script>
 </body>
 </html>
